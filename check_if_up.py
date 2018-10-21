@@ -3,7 +3,7 @@ import urllib.request
 import time
 import os
 import pygame
-url="http://reg.exam.dtu.ac.in"
+url="http://reg.exam.dtu.ac.in" #change the url if needed 
 source=urllib.request.urlopen(url).read()
 new_source=source
 counter=0
@@ -25,7 +25,7 @@ while True:
 		counter+=1
 
 pygame.init()
-pygame.mixer.music.load("break_free.mp3")
+pygame.mixer.music.load("break_free.mp3")#change the music name here if needed
 pygame.mixer.music.play()
 while True:
 	pass
