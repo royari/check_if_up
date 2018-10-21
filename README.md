@@ -1,9 +1,9 @@
 # check_if_up
-A simple python3 program to check of my University's website is up and running.
+A python3 program to check of my University's website is up and running.
 
 ## Getting Started
 
-downlod the program and edit the name of the webiste and the music ( with the music file being in the same directory )with your choice. 
+Downlod the program and replace the name of the webiste and the music ( with the music file being in the same directory ) with your choice. 
 
 
 
