@@ -1,5 +1,5 @@
 # check_if_up
-A python3 program to check of my University's website is up and running.
+A python3 program to check if my University's website is up and running.
 
 ## Getting Started
 
