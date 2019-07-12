@@ -6,16 +6,16 @@ Done using selenium.
 
 Clone or downlod the program and replace the url and the music ( with the music file being in the same directory ) if required. 
 
-##Dependencies
+## Dependencies
 download the following python3 packages.
 
-copy paste this in the terminal.
+* copy & paste this in the terminal.
 ```
 pip3 install pygame selenium urllib3 
 ```
 
 
-*[driver](https://chromedriver.storage.googleapis.com/index.html?path=75.0.3770.90/)-download the chrome driver as per your operating system.
+* [driver](https://chromedriver.storage.googleapis.com/index.html?path=75.0.3770.90/)-download the chrome driver as per your operating system.
 
 ## Deploying 
 Run the program.
@@ -29,7 +29,7 @@ python3 check_if_ip.py -u 2k16/it/36 -p aba28jak
 ```
 
 ## Testing
-* with google chrome Version 75 and python 3.7
+* tested google chrome Version 75 and python 3.7 on macOS 10.14
 
 ## Built With
 
