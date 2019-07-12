@@ -1,4 +1,5 @@
 #!/usr/local/bin/python3
+import functools
 from selenium import webdriver
 from utility_methods.utility_methods import * # imports the dtu_method decorator
 import urllib.request
@@ -85,7 +86,7 @@ if __name__ == "__main__":
 			print("connection refused count %d",counter)
 			counter+=1
 		except urllib.error.HTTPError as e :
-			print(f"{e}")
+			print(f"{e} count: {counter}")
 			counter+=1
 	
 	
