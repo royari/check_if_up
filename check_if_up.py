@@ -23,7 +23,7 @@ class bot:
 		self.driver=webdriver.Chrome("./chromedriver")
 		self.url=url                                            #! "https://cumsdtu.in"
 		# self.page=page
-		self.music("break_free.mp3") #change the music name here if needed
+		self.music("break_free.mp3") # COMMENT THIS OR change the music name here if needed
 		self.login()
 	
 	@dtu_method	
