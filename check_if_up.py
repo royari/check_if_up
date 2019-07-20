@@ -1,7 +1,8 @@
 #!/usr/local/bin/python3
-import functools
+#import functools
 from selenium import webdriver
 from utility_methods.utility_methods import * # imports the dtu_method decorator
+from selenium.webdriver.chrome.options import Options
 import urllib.request
 import time
 import os
@@ -20,7 +21,10 @@ class bot:
 		'''
 		self.user=user
 		self.password=password
-		self.driver=webdriver.Chrome("./chromedriver")
+		self.chrome_options=Options()
+		self.chrome_options.add_argument("--disable-infobars")
+		self.driver=webdriver.Chrome(executable_path="./chromedriver",options=self.chrome_options)
+		#self.driver=webdriver.Chrome("./chromedriver")
 		self.url=url                                            #! "https://cumsdtu.in"
 		# self.page=page
 		self.music("break_free.mp3") # COMMENT THIS OR change the music name here if needed
@@ -66,7 +70,7 @@ if __name__ == "__main__":
 
 
 	url="https://cumsdtu.in/registration_student/login/login.jsp" #! Change the URL if required
-
+    #url="https://webcache.googleusercontent.com/search?q=cache:YfcvsRm_o5gJ:https://cumsdtu.in/registration_student/+&cd=1&hl=en&ct=clnk&gl=in"
 
 	# source=urllib.request.urlopen(url).read()
 	# new_source=source
