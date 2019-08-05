@@ -1,6 +1,9 @@
 # check_if_up
-A python3 program to check if DTU's website is up and running and then automates the login process.
+Its a python3 program to check if DTU's website is up and running and notifies the user by playing a song. It also automates the login process.
 Done using selenium.
+
+## Why?
+DTU's registration always crashes before registration of subject due to high traffic and its taken to lot of effort to sit and keep refreshing the webpage mannually to check if it loads. Since the registration process works in a first come first serve basis, the program helps make life a bit easier.
 
 ## Getting Started
 
