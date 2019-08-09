@@ -2,12 +2,16 @@ import cv2
 import os
 import os.path
 import glob
+import time
 
 CAPTCHA_FOLDER = '../captcha_data'
 LETTER_FOLDER = '../letters'
 
 image_files = glob.glob(os.path.join(CAPTCHA_FOLDER,"*"))
-# print(f'image folder is {image_files}')
+# print(f'Total files = {len(image_files)}')
+# for i,_ in enumerate(image_files):
+#     print(f'image ({i+1}/{len(image_files)}) is ----------> {_}')
+#     time.sleep(0.1)
 counts = {}
 
 for i,image_file in enumerate(image_files):
