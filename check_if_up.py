@@ -14,6 +14,8 @@ from PIL import Image
 import base64
 import cv2
 from ocr.CNN import Net
+
+
 class bot:
 	
 	def __init__(self,user,password,url):
