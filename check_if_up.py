@@ -9,11 +9,11 @@ import pygame
 import optparse
 import torch
 import torchvision
-from utility_methods.charDiv import imshow,Div #importing from local directory
+from utility_methods.charDiv import Div #importing from local directory
 from PIL import Image
 import base64
 import cv2
-from ocr.CNN import Net
+from ocr.CNN import Net #imports the neural net
 
 
 class bot:
@@ -29,14 +29,14 @@ class bot:
 		'''
 		self.user=user
 		self.password=password
-		self.chrome_options=Options()
+		self.chrome_options=webdriver.ChromeOptions()
 		self.chrome_options.add_argument("--disable-infobars")
 		self.driver=webdriver.Chrome(executable_path="./chromedriver",options=self.chrome_options)
 		#self.driver=webdriver.Chrome("./chromedriver")
 		self.url=url                                            #! "https://cumsdtu.in"
 		# self.page=page
-		# self.music("break_free.mp3") # COMMENT THIS OR change the music name here if needed
-		self.login()
+		# self.music("break_free.mp3") # COMMENT THIS OR change the music name here if neede
+		#self.login()
 	
 	@dtu_method	
 	def login(self):
@@ -51,7 +51,6 @@ class bot:
 		self.captcha_val = self.breakCaptcha()
 		print(f'Captcha Value ---------------- {self.captcha_val}')
 		self.driver.find_element_by_name("captcha").send_keys(self.captcha_val)
-		# s=input("Enter to continue")
 		button=self.driver.find_element_by_id("submitButton")
 		button.click()
 	
@@ -137,6 +136,9 @@ if __name__ == "__main__":
 			if(int(a)==200):
 				print("\n\n YAY WE ARE IN \n\n")
 				dtu_bot=bot(username,password,url)
+				dtu_bot.login()
+				while dtu_bot.driver.current_url == url:
+					dtu_bot.login()
 				break
 			else:
 				counter+=1
