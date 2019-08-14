@@ -54,7 +54,6 @@ class bot:
 		button=self.driver.find_element_by_id("submitButton")
 		button.click()
 	
-	#@dtu_method
 	def music(self,path):
 		'''
 		Plays the music once the page is loaded
@@ -67,6 +66,9 @@ class bot:
 		time.sleep(1)
 
 	def getCaptcha(self):
+		'''
+		Downloads the present captcha that needs to be breaked
+		'''
 		captcha_element = self.driver.find_element_by_xpath('//*[@id="captchaImg"]')
 		img_captcha_base64 = self.driver.execute_async_script("""
     	var ele = arguments[0], callback = arguments[1];
@@ -114,6 +116,7 @@ class bot:
 
 
 if __name__ == "__main__":
+	
 	parser=optparse.OptionParser(usage="usage: %prog -u <username> -p <password>",version="%prog 2.0")
 	parser.add_option('-u',dest="username",type='string',help='Enter the username')
 	parser.add_option('-p',dest="password",type='string',help='Enter the password')
@@ -127,8 +130,7 @@ if __name__ == "__main__":
 
 
 	url="https://cumsdtu.in/registration_student/login/login.jsp" #! Change the URL if required
-    #url="https://webcache.googleusercontent.com/search?q=cache:Yfcv\
-	# sRm_o5gJ:https://cumsdtu.in/registration_student/+&cd=1&hl=en&ct=clnk&gl=in"
+   
 	counter=0
 	while True:
 		try:
