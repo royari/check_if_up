@@ -16,8 +16,8 @@ download the following python3 packages.
 
 * copy & paste this in the terminal.
 ```
-pip3 install pygame selenium urllib3
-pip3 install Pillow
+ pip3 install -r requirements.txt
+
 ```
 
 
@@ -44,7 +44,6 @@ the [ocr](https://github.com/AlphaRoy14/check_if_up/tree/master/ocr) directory c
 ## Built With
 
 * [pygame](https://www.pygame.org/docs/) - To add the music 
-* [urllib](https://docs.python.org/3/library/urllib.html) - To access the URL
 * [selenium](https://selenium-python.readthedocs.io/)- To automate the web access
 * [pytorch](https://pytorch.org/)
 
